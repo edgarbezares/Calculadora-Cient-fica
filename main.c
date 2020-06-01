@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-
-
-#include <windows.h>
 #include <windowsx.h>
-#include <stdio.h>
+
 HWND ventana,boton,boton2,label,lx,ly,texto,leertxt;
 int tx,ty;
 
@@ -74,7 +71,6 @@ LRESULT CALLBACK winProc(HWND hwnd,UINT msj,WPARAM wParam,LPARAM lParam){
 char app[] = "Mi clase";
 int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
     ///Ventana madre------"Contenido de la ventana","Título","Comportamiento y apariencia con botones y/o íconos"
-    ///MessageBox(HWND_DESKTOP,"Hola mundo cruel","Mi primera ventana",MB_OK|MB_ICONEXCLAMATION);
 
     WNDCLASSEX vtn;
     vtn.cbClsExtra=0;
