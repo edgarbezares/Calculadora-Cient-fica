@@ -5,7 +5,7 @@
 
 ///Botones
 HWND ventana,boton,boton2,label,lx,ly,texto,leertxt;
-HWND sin,cos,tan,sec,csc,cot,arcs,arcc,arct,arcsec,arcscs,arccot;
+HWND sin,cos,tan,sec,csc,cot,arcsin,arccos,arctan,arcsec,arccsc,arccot;
 
 ///Etiquetas estáticas
 HWND tipos_conversion,bin,binl,oct,octl,hex,hexl,grados,gradosl,font,fun_trigl;
@@ -112,7 +112,7 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
     hexl = CreateWindow("STATIC","A",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_RIGHT,40.25,216,105,29.75,ventana,NULL,ins,NULL);
     grados = CreateWindow("STATIC","Grad:",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_LEFT,6,266,34.25,29.75,ventana,NULL,ins,NULL);
     gradosl = CreateWindow("STATIC","10° 00' 00''",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_RIGHT,40.25,266,105,29.75,ventana,NULL,ins,NULL);
-    fun_trigl = CreateWindow("STATIC","Funciones trigonométricas",WS_CHILD | WS_VISIBLE | SS_LEFT | SS_CENTER ,166,62,236,30,ventana,NULL,ins,NULL);
+    fun_trigl = CreateWindow("STATIC","Funciones trigonométricas",WS_CHILD | WS_VISIBLE | SS_LEFT | SS_CENTER ,166,62,208,30,ventana,NULL,ins,NULL);
 
 ///int x(posición horizontal),int y(posición vertical),nWidth (anchura),int nHeight(altura).
 
@@ -120,7 +120,9 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
 
     //Funciones trigonométricas
 
-    sin = CreateWindow("BUTTON","sin",WS_CHILD | WS_VISIBLE | SS_CENTER ,166,72,236,30,ventana,NULL,ins,NULL);
+    arcsec = CreateWindow("BUTTON","arcsec",WS_CHILD | WS_VISIBLE | SS_CENTER ,170,116,55,50,ventana,NULL,ins,NULL);
+    arccsc = CreateWindow("BUTTON","arccsc",WS_CHILD | WS_VISIBLE | SS_CENTER ,170,166,55,50,ventana,NULL,ins,NULL);
+    arccot = CreateWindow("BUTTON","arccot",WS_CHILD | WS_VISIBLE | SS_CENTER ,170,216,55,50,ventana,NULL,ins,NULL);
 
 
 
