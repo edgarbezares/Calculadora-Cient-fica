@@ -5,9 +5,10 @@
 
 ///Botones
 HWND ventana,boton,boton2,label,lx,ly,texto,leertxt;
+HWND sin,cos,tan,sec,csc,cot,arcs,arcc,arct,arcsec,arcscs,arccot;
 
 ///Etiquetas estáticas
-HWND tipos_conversion,bin,binl,oct,octl,hex,hexl,grados,gradosl,font;
+HWND tipos_conversion,bin,binl,oct,octl,hex,hexl,grados,gradosl,font,fun_trigl;
 int tx,ty;
 
 int Longitud_cadena(char cad[]){
@@ -97,8 +98,6 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
         MessageBox(HWND_DESKTOP,"Error al crear la clase","Error",MB_ICONERROR|MB_OK);
     }
 
-///int x(posición horizontal),int y(posición vertical),nWidth (anchura),int nHeight(altura).
-
     ventana = CreateWindow(app,"Mi ventana",WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,CW_USEDEFAULT,CW_USEDEFAULT,636.5,381.5,HWND_DESKTOP,NULL,ins,NULL);
     texto = CreateWindow("EDIT","",WS_CHILD | WS_VISIBLE  | ES_LOWERCASE | WS_BORDER | ES_RIGHT,6,12,580,34,ventana,NULL,ins,NULL);
 
@@ -113,6 +112,16 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
     hexl = CreateWindow("STATIC","A",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_RIGHT,40.25,216,105,29.75,ventana,NULL,ins,NULL);
     grados = CreateWindow("STATIC","Grad:",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_LEFT,6,266,34.25,29.75,ventana,NULL,ins,NULL);
     gradosl = CreateWindow("STATIC","10° 00' 00''",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_RIGHT,40.25,266,105,29.75,ventana,NULL,ins,NULL);
+    fun_trigl = CreateWindow("STATIC","Funciones trigonométricas",WS_CHILD | WS_VISIBLE | SS_LEFT | SS_CENTER ,166,62,236,30,ventana,NULL,ins,NULL);
+
+///int x(posición horizontal),int y(posición vertical),nWidth (anchura),int nHeight(altura).
+
+///Creación de botones
+
+    //Funciones trigonométricas
+
+    sin = CreateWindow("BUTTON","sin",WS_CHILD | WS_VISIBLE | SS_CENTER ,166,72,236,30,ventana,NULL,ins,NULL);
+
 
 
     /*boton = CreateWindow("BUTTON","Boton",WS_CHILD | WS_VISIBLE,10,10,80,30,ventana,NULL,ins,NULL);
