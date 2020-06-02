@@ -6,6 +6,8 @@
 ///Botones
 HWND ventana,boton,boton2,label,lx,ly,texto,leertxt;
 HWND bsin,bcos,btan,bsec,bcsc,bcot,barcsin,barccos,barctan,barcsec,barccsc,barccot;
+HWND bpot,bmul,bdiv,boff,bac,braiz,bsum,bfact,bporc,bpariz,bparder,bpunto,bresultado;
+HWND b1,b2,b3,b4,b5,b6,b7,b8,b9;
 
 ///Etiquetas estáticas
 HWND tipos_conversion,lbin,binl,loct,octl,lhex,hexl,lgrados,gradosl,font,fun_trigl;
@@ -135,8 +137,11 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
 
 
     //Operaciones principales y básicas
-
-
+    bpot = CreateWindow("BUTTON","^",WS_CHILD | WS_VISIBLE | SS_CENTER ,420,62,45,45,ventana,NULL,ins,NULL);
+    braiz = CreateWindow("BUTTON","sqrt(x)",WS_CHILD | WS_VISIBLE | SS_CENTER ,420,107,45,45,ventana,NULL,ins,NULL);
+    bfact = CreateWindow("BUTTON","x!",WS_CHILD | WS_VISIBLE | SS_CENTER ,420,152,45,45,ventana,NULL,ins,NULL);
+    bporc = CreateWindow("BUTTON","x%",WS_CHILD | WS_VISIBLE | SS_CENTER ,420,197,45,45,ventana,NULL,ins,NULL);
+    bpariz = CreateWindow("BUTTON","(",WS_CHILD | WS_VISIBLE | SS_CENTER ,420,242,45,45,ventana,NULL,ins,NULL);
 
 
 
