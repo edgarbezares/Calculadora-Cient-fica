@@ -96,12 +96,12 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
 
 ///int x(posición horizontal),int y(posición vertical),nWidth (anchura),int nHeight(altura).
 
-    ventana = CreateWindow(app,"Mi ventana",WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,616.5,361.5,HWND_DESKTOP,NULL,ins,NULL);
-    texto = CreateWindow("EDIT","",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_BORDER,6,12,580,84,ventana,NULL,ins,NULL);
+    ventana = CreateWindow(app,"Mi ventana",WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,CW_USEDEFAULT,CW_USEDEFAULT,636.5,381.5,HWND_DESKTOP,NULL,ins,NULL);
+    texto = CreateWindow("EDIT","",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_BORDER,6,12,600,84,ventana,NULL,ins,NULL);
 
     ///Creación de etiquetas
-    tipos_conversion = CreateWindow("STATIC","Tipos de conversion",WS_CHILD | WS_VISIBLE | SS_LEFT ,6,102,120,30,ventana,NULL,ins,NULL);
-    bin = CreateWindow("STATIC","Bin:",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_LEFT,6,156,14.25,9.75,ventana,NULL,ins,NULL);
+    tipos_conversion = CreateWindow("STATIC","Tipos de conversion",WS_CHILD | WS_VISIBLE | SS_LEFT ,6,122,140,30,ventana,NULL,ins,NULL);
+    bin = CreateWindow("STATIC","Bin:",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_LEFT,6,156,34.25,29.75,ventana,NULL,ins,NULL);
     /*boton = CreateWindow("BUTTON","Boton",WS_CHILD | WS_VISIBLE,10,10,80,30,ventana,NULL,ins,NULL);
     boton2 = CreateWindow("BUTTON","Boton2",WS_CHILD | WS_VISIBLE,10,80,80,30,ventana,NULL,ins,NULL);
     label = CreateWindow("STATIC","Hola mundo, soy un label",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_CENTER,100,50,150,40,ventana,NULL,ins,NULL);
