@@ -7,7 +7,7 @@
 HWND ventana,boton,boton2,label,lx,ly,texto,leertxt;
 
 ///Etiquetas estáticas
-HWND tipos_conversion,bin,binr,oct,octr,hex,hexr,grados,gradosr;
+HWND tipos_conversion,bin,binr,oct,octr,hex,hexr,grados,gradosr,font;
 int tx,ty;
 
 int Longitud_cadena(char cad[]){
