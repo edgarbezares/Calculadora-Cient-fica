@@ -110,10 +110,7 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
 
     /*boton = CreateWindow("BUTTON","Boton",WS_CHILD | WS_VISIBLE,10,10,80,30,ventana,NULL,ins,NULL);
     boton2 = CreateWindow("BUTTON","Boton2",WS_CHILD | WS_VISIBLE,10,80,80,30,ventana,NULL,ins,NULL);
-    label = CreateWindow("STATIC","Hola mundo, soy un label",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_CENTER,100,50,150,40,ventana,NULL,ins,NULL);
-    lx = CreateWindow("STATIC","0",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_CENTER,10,300,80,20,ventana,NULL,ins,NULL);
-    ly = CreateWindow("STATIC","0",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_CENTER,90,300,80,20,ventana,NULL,ins,NULL);*/
-        //leertxt = CreateWindow("BUTTON","Leer texto",WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON|BS_CENTER,10,130,80,30,ventana,NULL,ins,NULL);
+    label = CreateWindow("STATIC","Hola mundo, soy un label",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_CENTER,100,50,150,40,ventana,NULL,ins,NULL);*/
 
     if(!ventana){
         MessageBox(HWND_DESKTOP,"Error al crear la ventana","Error",MB_ICONERROR|MB_OK);
