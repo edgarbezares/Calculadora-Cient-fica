@@ -4,14 +4,13 @@
 #include <windowsx.h>
 
 ///Botones
-HWND ventana,boton,boton2,label,lx,ly,texto,leertxt;
+HWND ventana,texto;
 HWND bsin,bcos,btan,bsec,bcsc,bcot,barcsin,barccos,barctan,barcsec,barccsc,barccot;
 HWND bpot,bmul,bdiv,boff,bac,braiz,bsum,bfact,bporc,bpariz,bparder,bpunto,bresta,bresultado;
 HWND b0,b1,b2,b3,b4,b5,b6,b7,b8,b9;
 
 ///Etiquetas estáticas
 HWND tipos_conversion,lbin,binl,loct,octl,lhex,hexl,lgrados,gradosl,font,fun_trigl;
-int tx,ty;
 
 int Longitud_cadena(char cad[]){
     int i=0;
@@ -26,44 +25,22 @@ char enteroACaracter(int numero){
 
 LRESULT CALLBACK winProc(HWND hwnd,UINT msj,WPARAM wParam,LPARAM lParam){
     switch(msj){
-    case WM_MOUSEMOVE:
-        tx = GET_X_LPARAM(lParam);
-        ty = GET_Y_LPARAM(lParam);
-        char bufferx[100];
-        char buffery[100];
-        itoa(tx,bufferx,10);
-        itoa(ty,buffery,10);
-        SetWindowText(lx,bufferx);
-        SetWindowText(ly,buffery);
-        break;
 
     case WM_COMMAND: ///Referente a cuando se hace click
 
-        if((HWND)lParam == boton){
-            MessageBox(hwnd,"Le diste click al boton","Aviso",MB_OK | MB_ICONASTERISK);
+        if((HWND)lParam == b1){
+            MessageBox(hwnd,"1","Aviso",MB_OK | MB_ICONASTERISK);
         }
 
 
-        if((HWND)lParam == label){
-            MessageBox(hwnd,"Le diste click al texto","Aviso",MB_OK | MB_ICONASTERISK);
+        if((HWND)lParam == bpot){
+            MessageBox(hwnd,"^","Aviso",MB_OK | MB_ICONASTERISK);
         }
 
-        if((HWND)lParam == leertxt){
-            char gtext[100],c[2];
-            GetWindowText(texto,gtext,100);
-
-            if(Longitud_cadena(gtext)<10)
-            c[0]=enteroACaracter(Longitud_cadena(gtext));
-            else{
-                c[0]=enteroACaracter(Longitud_cadena(gtext)/10);
-                c[1]=enteroACaracter(Longitud_cadena(gtext)%10);
-            }
-            MessageBox(hwnd,c,"Longitud de texto",MB_OK | MB_ICONINFORMATION);
-
-            strupr(gtext);
-            MessageBox(hwnd,gtext,"Mayusculas",MB_OK | MB_ICONASTERISK);
-            strlwr(gtext);
-            MessageBox(hwnd,gtext,"Minusculas",MB_OK | MB_ICONASTERISK);
+        if((HWND)lParam == bresultado){
+            ///char gtext[100],c[2];
+            ///GetWindowText(texto,gtext,100);
+           /// MessageBox(hwnd,gtext,"Longitud de texto",MB_OK | MB_ICONINFORMATION);
             break;
         }
 
@@ -162,11 +139,6 @@ int WINAPI WinMain(HINSTANCE ins,HINSTANCE ins2,LPSTR cmd, int estado){
     bresta = CreateWindow("BUTTON","-",WS_CHILD | WS_VISIBLE | SS_CENTER ,585,155,45,45,ventana,NULL,ins,NULL);
     bresultado = CreateWindow("BUTTON","=",WS_CHILD | WS_VISIBLE | SS_CENTER ,585,200,45,90,ventana,NULL,ins,NULL);
 
-
-
-    /*boton = CreateWindow("BUTTON","Boton",WS_CHILD | WS_VISIBLE,10,10,80,30,ventana,NULL,ins,NULL);
-    boton2 = CreateWindow("BUTTON","Boton2",WS_CHILD | WS_VISIBLE,10,80,80,30,ventana,NULL,ins,NULL);
-    label = CreateWindow("STATIC","Hola mundo, soy un label",WS_CHILD | WS_VISIBLE | SS_NOTIFY | SS_CENTER,100,50,150,40,ventana,NULL,ins,NULL);*/
 
     if(!ventana){
         MessageBox(HWND_DESKTOP,"Error al crear la ventana","Error",MB_ICONERROR|MB_OK);
