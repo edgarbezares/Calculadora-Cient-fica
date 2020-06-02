@@ -38,6 +38,7 @@ LRESULT CALLBACK winProc(HWND hwnd,UINT msj,WPARAM wParam,LPARAM lParam){
         }
 
         if((HWND)lParam == bresultado){
+    ///La función getwindow es para copiar lo que hay en la caja de texto en la cadena "gtext"
             ///char gtext[100],c[2];
             ///GetWindowText(texto,gtext,100);
            /// MessageBox(hwnd,gtext,"Longitud de texto",MB_OK | MB_ICONINFORMATION);
