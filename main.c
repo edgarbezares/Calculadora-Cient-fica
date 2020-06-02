@@ -28,6 +28,8 @@ LRESULT CALLBACK winProc(HWND hwnd,UINT msj,WPARAM wParam,LPARAM lParam){
 
     case WM_COMMAND: ///Referente a cuando se hace click
 
+
+
         if((HWND)lParam == b1){
             MessageBox(hwnd,"1","Aviso",MB_OK | MB_ICONASTERISK);
         }
